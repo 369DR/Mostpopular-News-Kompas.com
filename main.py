@@ -3,9 +3,9 @@ Aplikasi membuat modularisasi Berita terkini dari kompas TV
 
 """
 
-import  beritaterkini
+import  beritaterpopuler
 
 if __name__ == '__main__':
     print("Aplikasi utama")
-    result = beritaterkini.ekstrasi_data()
-    beritaterkini.tampilkan_data(result)
+    result = beritaterpopuler.ekstrasi_data()
+    beritaterpopuler.tampilkan_data(result)
