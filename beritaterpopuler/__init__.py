@@ -5,6 +5,7 @@ import beritaterpopuler
 
 def ekstrasi_data():
     """
+    10 Berita terpopuler Berdasarkan Kompas.com
     A
     1.Istri Pamer Harta, Ini Alasan LHKPN Pejabat Kemensetneg Esha Rahmansah Tak Bisa Ditelusuri
     Dibaca 22.974 kali
@@ -60,7 +61,6 @@ def ekstrasi_data():
         I = None
         J = None
         for res in result:
-            print(i, res)
             if i == 1:
                 A = res.text
             elif i == 2:
@@ -86,16 +86,16 @@ def ekstrasi_data():
 
 
         hasil = dict()
-        hasil["A"] =  A #"Berita A"
-        hasil["B"] =  B #"Berita B"
-        hasil["C"] =  C #"Berita C"
-        hasil["D"] =  D #"Berita D"
-        hasil["E"] =  E #"Berita E"
-        hasil["F"] =  F #"Berita F"
-        hasil["G"] =  G #"Berita G"
-        hasil["H"] =  H #"Berita H"
-        hasil["I"] =  I #"Berita I"
-        hasil["J"] =  J #"Berita J"
+        hasil["A"] =  A
+        hasil["B"] =  B
+        hasil["C"] =  C
+        hasil["D"] =  D
+        hasil["E"] =  E
+        hasil["F"] =  F
+        hasil["G"] =  G
+        hasil["H"] =  H
+        hasil["I"] =  I
+        hasil["J"] =  J
         return hasil
     else:
         return None
@@ -103,9 +103,9 @@ def ekstrasi_data():
 
 def tampilkan_data(result):
     if result is None:
-        print("Todak bisa menemukan data Berita Terpopuler dari situs Kompas.com")
+        print("Tidak bisa menemukan data Berita Terpopuler dari situs Kompas.com")
         return
-    print("\nBerita Terpopuler berdasarkan situs berita Kompas.com")
+    print("\n10 Berita Terpopuler berdasarkan situs berita Kompas.com")
     print(f"1. {result['A']}")
     print(f"2. {result['B']}")
     print(f"3. {result['C']}")
