@@ -119,6 +119,5 @@ def tampilkan_data(result):
 
 
 if __name__ == '__main__':
-    print("Aplikasi utama")
-    result = beritaterpopuler.ekstrasi_data()
-    beritaterpopuler.tampilkan_data(result)
+    result = ekstrasi_data()
+    tampilkan_data(result)
