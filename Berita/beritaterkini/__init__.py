@@ -3,7 +3,6 @@ import requests
 
 description = "To get the newestearthquake in Indonesia from bmkg.go.id"
 
-import beritaterpopuler
 
 def ekstrasi_data():
     """
