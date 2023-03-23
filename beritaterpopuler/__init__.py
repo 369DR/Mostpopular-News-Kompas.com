@@ -3,14 +3,42 @@ import requests
 """
 method = fungsi
 Field / Atribute = variable
+Constructor = method yang dipanggil pertama kali saat object diciptakan, Gunakan untuk mendeklarasikan semua field 
+pada class ini 
 """
 
-class beritaterpopuler:
-    def __init__(self, url):
-        self.description = "To get the newestearthquake in Indonesia from bmkg.go.id"
+class berita:
+    def __init__(self, url, description):
+        self.description = description
         self.result = None
         self.url = url
-    def ekstrasi_data(self):
+
+    def tampilkan_keterangan(self):
+        print(self.description)
+
+    def scraping_data(self):
+        print("scraping_data not yet implemented")
+
+    def tampilkan_data(self):
+        print("tampilkan_data not yet implemented")
+
+    def run(self):
+        self.scraping_data()
+        self.tampilkan_data()
+
+class terpopuler_di_detik(berita):
+    def __init__(self, url):
+        super(terpopuler_di_detik, self).__init__(url,
+                                       "NOT YET IMPELEMENTED, "
+                                       "but it should return mostpopuler news in Indonesia from detik.com")
+    def tampilkan_keterangan(self):
+        print(f"UNDER CONSTRUCTION{self.description}")
+
+class beritaterpopuler(berita):
+    def __init__(self, url):
+        super(beritaterpopuler, self).__init__(url, "To get the mostpopuler news in Indonesia from kompas.com")
+
+    def scraping_data(self):
         """
         10 Berita terpopuler Berdasarkan Kompas.com
         A
@@ -124,18 +152,24 @@ class beritaterpopuler:
         print(f"9. {self.result['I']}")
         print(f"10. {self.result['J']}")
 
-    def run (self):
-        self.ekstrasi_data()
-        self.tampilkan_data()
-
 
 if __name__ == '__main__':
     berita_di_Kompas = beritaterpopuler("https://www.kompas.com/")
-    print("deskripsi class", berita_di_Kompas.description)
+    berita_di_Kompas.tampilkan_keterangan()
     berita_di_Kompas.run()
 
-    berita_di_Indonesia = beritaterpopuler("https://www.kompas.com/")
-    print("deskripsi class", berita_di_Indonesia.description)
-    berita_di_Indonesia.run()
+    berita_di_detik = terpopuler_di_detik ("NOT YET")
+    berita_di_detik.tampilkan_keterangan()
+    berita_di_detik.run()
+
+    daftar_berita = [berita_di_Kompas, berita_di_detik]
+    print("\nSemua berita yang ada")
+    for berita in daftar_berita:
+        berita.tampilkan_keterangan()
+
+
+    # berita_di_detikcom = beritaterpopuler("https://www.kompas.com/")
+    # print("\ndeskripsi class berita terpopuler di detik.com", berita_di_detikcom.description)
+    # berita_di_detikcom.run()
     # berita_di_Kompas.ekstrasi_data()
     # berita_di_Kompas.tampilkan_data()
