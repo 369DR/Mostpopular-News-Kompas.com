@@ -1,10 +1,15 @@
 from bs4 import BeautifulSoup
 import requests
+"""
+method = fungsi
+Field / Atribute = variable
+"""
 
 class beritaterpopuler:
-    def __init__(self):
+    def __init__(self, url):
         self.description = "To get the newestearthquake in Indonesia from bmkg.go.id"
         self.result = None
+        self.url = url
     def ekstrasi_data(self):
         """
         10 Berita terpopuler Berdasarkan Kompas.com
@@ -42,7 +47,7 @@ class beritaterpopuler:
         :return:
         """
         try:
-            content = requests.get("https://www.kompas.com/")
+            content = requests.get(self.url)
         except Exception:
             return None
         if content.status_code == 200:
@@ -125,8 +130,12 @@ class beritaterpopuler:
 
 
 if __name__ == '__main__':
-    berita_di_Kompas = beritaterpopuler()
-    print("deskripsi package", berita_di_Kompas.description)
+    berita_di_Kompas = beritaterpopuler("https://www.kompas.com/")
+    print("deskripsi class", berita_di_Kompas.description)
     berita_di_Kompas.run()
+
+    berita_di_Indonesia = beritaterpopuler("https://www.kompas.com/")
+    print("deskripsi class", berita_di_Indonesia.description)
+    berita_di_Indonesia.run()
     # berita_di_Kompas.ekstrasi_data()
     # berita_di_Kompas.tampilkan_data()
