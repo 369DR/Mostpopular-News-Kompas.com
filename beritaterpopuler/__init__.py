@@ -5,11 +5,26 @@ method = fungsi
 Field / Atribute = variable
 """
 
-class beritaterpopuler:
-    def __init__(self, url):
-        self.description = "To get the newestearthquake in Indonesia from bmkg.go.id"
+class berita:
+    def __init__(self, url, description):
+        self.description = None
         self.result = None
         self.url = url
+
+    def ekstrasi_data(self):
+        pass
+
+    def tampilkan_data(self):
+        pass
+
+    def run(self):
+        self.ekstrasi_data()
+        self.tampilkan_data()
+
+class beritaterpopuler(berita):
+    def __init__(self, url):
+        super(beritaterpopuler, self).__init__(url, "To get the mostpopuler news in Indonesia from kompas.com")
+
     def ekstrasi_data(self):
         """
         10 Berita terpopuler Berdasarkan Kompas.com
@@ -124,18 +139,14 @@ class beritaterpopuler:
         print(f"9. {self.result['I']}")
         print(f"10. {self.result['J']}")
 
-    def run (self):
-        self.ekstrasi_data()
-        self.tampilkan_data()
-
 
 if __name__ == '__main__':
     berita_di_Kompas = beritaterpopuler("https://www.kompas.com/")
-    print("deskripsi class", berita_di_Kompas.description)
+    print("deskripsi class berita terpopuler di kompas.com", berita_di_Kompas.description)
     berita_di_Kompas.run()
 
-    berita_di_Indonesia = beritaterpopuler("https://www.kompas.com/")
-    print("deskripsi class", berita_di_Indonesia.description)
-    berita_di_Indonesia.run()
+    berita_di_detikcom = beritaterpopuler("https://www.kompas.com/")
+    print("deskripsi class berita terpopuler di detik.com", berita_di_detikcom.description)
+    berita_di_detikcom.run()
     # berita_di_Kompas.ekstrasi_data()
     # berita_di_Kompas.tampilkan_data()
