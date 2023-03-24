@@ -1,42 +1,41 @@
 from bs4 import BeautifulSoup
 import requests
 
-import beritaterpopuler
 
 
-def ekstrasi_data():
+def data_extraction():
     """
     Examples of the 10 most popular news
-    A
-    1.Istri Pamer Harta, Ini Alasan LHKPN Pejabat Kemensetneg Esha Rahmansah Tak Bisa Ditelusuri
+
+    A.Istri Pamer Harta, Ini Alasan LHKPN Pejabat Kemensetneg Esha Rahmansah Tak Bisa Ditelusuri
     Dibaca 22.974 kali
-    B
-    2.Isak Tangis Iringi Jenazah Syabda Perkasa Belawa dan Ibunya Saat Tiba di Rumah Duka
+
+    B.Isak Tangis Iringi Jenazah Syabda Perkasa Belawa dan Ibunya Saat Tiba di Rumah Duka
     Dibaca 15.648 kali
-    C
-    3.Viral, Foto Istrinya Pamer Tas Mewah Hermes dan Gucci, Sekda Riau: Itu KW, Belinya di Mangga Dua
+
+    C.Viral, Foto Istrinya Pamer Tas Mewah Hermes dan Gucci, Sekda Riau: Itu KW, Belinya di Mangga Dua
     Dibaca 15.375 kali
-    D
-    4.Kronologi Syabda Perkasa Belawa Meninggal Kecelakaan, Pahlawan Piala Thomas Berpulang...
+
+    D.Kronologi Syabda Perkasa Belawa Meninggal Kecelakaan, Pahlawan Piala Thomas Berpulang...
     Dibaca 14.137 kali
-    E
-    5.Kabar Duka, Tunggal Putra Indonesia Syabda Perkasa Belawa Meninggal Dunia
+
+    E.Kabar Duka, Tunggal Putra Indonesia Syabda Perkasa Belawa Meninggal Dunia
     Dibaca 13.526 kali
-    F
-    6.Luhut ke IMF: Kalian Jangan Macam-macam...
+
+    F.Luhut ke IMF: Kalian Jangan Macam-macam...
     Dibaca 13.431 kali
-    G
-    7.Saat "Netizen" Bantu KPK Bongkar Pejabat yang Pamer Harta...
+
+    G.Saat "Netizen" Bantu KPK Bongkar Pejabat yang Pamer Harta...
     Dibaca 8.932 kali
-    H
-    8.Sempat Terbengkalai di Bandara YIA, 38 Calon Jemaah Umrah Asal Rembang Pulang,
+
+    H.Sempat Terbengkalai di Bandara YIA, 38 Calon Jemaah Umrah Asal Rembang Pulang,
     Seorang Perantara Dilaporkan sebagai Penipu
     Dibaca 8.370 kali
-    I
-    9.Kala Megawati Semprot Ribuan Kades yang Minta Anggaran Jumbo...
+
+    I.Kala Megawati Semprot Ribuan Kades yang Minta Anggaran Jumbo...
     Dibaca 7.712 kali
-    J
-    10.Kapolda Jateng Resmi Pecat 5 Polisi yang Jadi Calo Penerimaan Bintara Polri 2022
+
+    J.Kapolda Jateng Resmi Pecat 5 Polisi yang Jadi Calo Penerimaan Bintara Polri 2022
     Dibaca 7.358 kali
     :return:
     """
@@ -84,27 +83,27 @@ def ekstrasi_data():
                 J = res.text
             i = i + 1
 
-        hasil = dict()
-        hasil["A"] = A
-        hasil["B"] = B
-        hasil["C"] = C
-        hasil["D"] = D
-        hasil["E"] = E
-        hasil["F"] = F
-        hasil["G"] = G
-        hasil["H"] = H
-        hasil["I"] = I
-        hasil["J"] = J
-        return hasil
+        results = dict()
+        results["A"] = A
+        results["B"] = B
+        results["C"] = C
+        results["D"] = D
+        results["E"] = E
+        results["F"] = F
+        results["G"] = G
+        results["H"] = H
+        results["I"] = I
+        results["J"] = J
+        return results
     else:
         return None
 
 
-def tampilkan_data(result):
+def data_show(result):
     if result is None:
-        print("Tidak bisa menemukan data Berita Terpopuler dari situs Kompas.com")
+        print("Couldn't find the Most Popular News data from the Kompas.com site")
         return
-    print("\n10 Berita Terpopuler berdasarkan situs berita Kompas.com")
+    print("\nThe 10 most popular news based on Kompas.com site")
     print(f"1. {result['A']}")
     print(f"2. {result['B']}")
     print(f"3. {result['C']}")
@@ -118,5 +117,5 @@ def tampilkan_data(result):
 
 
 if __name__ == '__main__':
-    result = ekstrasi_data()
-    tampilkan_data(result)
+    result = data_extraction()
+    data_show(result)
