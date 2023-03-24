@@ -5,7 +5,6 @@ import requests
 def data_extraction():
     """
     Examples of the 10 most popular news
-
     A
     1.Istri Pamer Harta, Ini Alasan LHKPN Pejabat Kemensetneg Esha Rahmansah Tak Bisa Ditelusuri
     B
@@ -73,18 +72,18 @@ def data_extraction():
                 J = res.text
             i = i + 1
 
-        results = dict()
-        results["A"] = A
-        results["B"] = B
-        results["C"] = C
-        results["D"] = D
-        results["E"] = E
-        results["F"] = F
-        results["G"] = G
-        results["H"] = H
-        results["I"] = I
-        results["J"] = J
-        return results
+        hasil = dict()
+        hasil["A"] = A
+        hasil["B"] = B
+        hasil["C"] = C
+        hasil["D"] = D
+        hasil["E"] = E
+        hasil["F"] = F
+        hasil["G"] = G
+        hasil["H"] = H
+        hasil["I"] = I
+        hasil["J"] = J
+        return hasil
     else:
         return None
 
@@ -104,8 +103,3 @@ def data_show(result):
     print(f"8. {result['H']}")
     print(f"9. {result['I']}")
     print(f"10. {result['J']}")
-
-
-if __name__ == '__main__':
-    result = data_extraction()
-    data_show(result)
