@@ -2,7 +2,6 @@ from bs4 import BeautifulSoup
 import requests
 
 
-
 def data_extraction():
     """
     Examples of the 10 most popular news

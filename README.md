@@ -14,9 +14,9 @@ to produce output in the form of JSON that is ready to be used in web or mobile 
     import beritaterpopuler
 
     if __name__ == '__main__':
-        print("Aplikasi utama")
-        result = beritaterpopuler.ekstrasi_data()
-        beritaterpopuler.tampilkan_data(result)
+        print("main application")
+        result = mostpopuler_news.data_extraction()
+        mostpopuler_news.data_show(result)
 
 ### Author
 

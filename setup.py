@@ -5,9 +5,9 @@ with open("README.md", "r", encoding='utf-8') as fh:
 
 setuptools.setup(
     name="Mostpopular-News-Kompas.com",
-    version="0.0.4",
+    version="0.0.5",
     author="Deni Rahmawan",
-    author_email="denirahmawan17@gmail.com",
+    author_email="dapatheia@gmail.com",
     description="This package will get the Mostpopular News From Kompas.com",
     long_description=long_description,
     long_description_content_type="text/markdown",
