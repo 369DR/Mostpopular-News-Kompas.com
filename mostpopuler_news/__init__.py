@@ -6,26 +6,27 @@ def data_extraction():
     """
     Examples of the 10 most popular news
 
-    A.Istri Pamer Harta, Ini Alasan LHKPN Pejabat Kemensetneg Esha Rahmansah Tak Bisa Ditelusuri
-
-    B.Isak Tangis Iringi Jenazah Syabda Perkasa Belawa dan Ibunya Saat Tiba di Rumah Duka
-
-    C.Viral, Foto Istrinya Pamer Tas Mewah Hermes dan Gucci, Sekda Riau: Itu KW, Belinya di Mangga Dua
-
-    D.Kronologi Syabda Perkasa Belawa Meninggal Kecelakaan, Pahlawan Piala Thomas Berpulang...
-
-    E.Kabar Duka, Tunggal Putra Indonesia Syabda Perkasa Belawa Meninggal Dunia
-
-    F.Luhut ke IMF: Kalian Jangan Macam-macam...
-
-    G.Saat "Netizen" Bantu KPK Bongkar Pejabat yang Pamer Harta...
-
-    H.Sempat Terbengkalai di Bandara YIA, 38 Calon Jemaah Umrah Asal Rembang Pulang,
+    A
+    1.Istri Pamer Harta, Ini Alasan LHKPN Pejabat Kemensetneg Esha Rahmansah Tak Bisa Ditelusuri
+    B
+    2.Isak Tangis Iringi Jenazah Syabda Perkasa Belawa dan Ibunya Saat Tiba di Rumah Duka
+    C
+    3.Viral, Foto Istrinya Pamer Tas Mewah Hermes dan Gucci, Sekda Riau: Itu KW, Belinya di Mangga Dua
+    D
+    4.Kronologi Syabda Perkasa Belawa Meninggal Kecelakaan, Pahlawan Piala Thomas Berpulang...
+    E
+    5.Kabar Duka, Tunggal Putra Indonesia Syabda Perkasa Belawa Meninggal Dunia
+    F
+    6.Luhut ke IMF: Kalian Jangan Macam-macam...
+    G
+    7.Saat "Netizen" Bantu KPK Bongkar Pejabat yang Pamer Harta...
+    H
+    8.Sempat Terbengkalai di Bandara YIA, 38 Calon Jemaah Umrah Asal Rembang Pulang,
     Seorang Perantara Dilaporkan sebagai Penipu
-
-    I.Kala Megawati Semprot Ribuan Kades yang Minta Anggaran Jumbo...
-
-    J.Kapolda Jateng Resmi Pecat 5 Polisi yang Jadi Calo Penerimaan Bintara Polri 2022
+    I
+    9.Kala Megawati Semprot Ribuan Kades yang Minta Anggaran Jumbo...
+    J
+    10.Kapolda Jateng Resmi Pecat 5 Polisi yang Jadi Calo Penerimaan Bintara Polri 2022
     :return:
     """
     try:
